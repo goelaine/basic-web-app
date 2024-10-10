@@ -32,6 +32,10 @@ describe("QueryProcessor", () => {
         expect(QueryProcessor("What is 5 multiplied by 5?")).toEqual("25");
         expect(QueryProcessor("What is 12 multiplied by 1?")).toEqual("12");
     });
+    test('should minus numbers', () => {
+        expect(QueryProcessor("What is 5 minus 5?")).toEqual("0");
+        expect(QueryProcessor("What is 12 minus 1?")).toEqual("11");
+    });
     test('should find max number', () => {
         expect(QueryProcessor("Which of the following numbers is the largest: 66, 35, 70?")).toEqual("70");
         expect(QueryProcessor("Which of the following numbers is the largest: 97, 12, 69?")).toEqual("97");
