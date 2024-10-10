@@ -18,15 +18,12 @@ export default function QueryProcessor(query: string): string {
     const y: number = parseInt(addMatch[2]);
     return (x+y).toString();
   }
-  const addLarge = query.match(/Which of the following numbers is the largest: (\d+), (\d+), (\d+)?/);
-  if (addMatch) {
-    const x: number = parseInt(addMatch[1]);
-    const y: number = parseInt(addMatch[2]);
-    const z: number = parseInt(addMatch[3]);
+  const addLarge = query.match(/Which of the following numbers is the largest: (\d+), (\d+), (\d+)/);
+  if (addLarge) {
+    const x: number = parseInt(addLarge[1]);
+    const y: number = parseInt(addLarge[2]);
+    const z: number = parseInt(addLarge[3]);
     return Math.max(x,y,z).toString();
   }
-
-
-
   return "";
 }
