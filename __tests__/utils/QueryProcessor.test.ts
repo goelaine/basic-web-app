@@ -24,4 +24,12 @@ describe("QueryProcessor", () => {
             "Your AndrewID is elainego."
           ));
     });
+    test('should add numbers', () => {
+        expect(QueryProcessor("What is 5 plus 52?")).toEqual("57");
+        expect(QueryProcessor("What is 12 plus 1?")).toEqual("13");
+    });
+    test('should find max number', () => {
+        expect(QueryProcessor("Which of the following numbers is the largest: 66, 35, 70?")).toEqual("70");
+        expect(QueryProcessor("Which of the following numbers is the largest: 97, 12, 69?")).toEqual("97");
+    });
 });
